@@ -11,11 +11,42 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <section id="score">
-        <p id="playerScoreCount"></p>
-        <p id="computerScoreCount"></p>
-        <p id="drawCount"></p>
-    </section>
+    <header id="titleSection">
+        <h1 id="pageTitle">Rock Paper Scissors</h1>
+        <button id="playBtn">Play Game</button>
+        <button id="resetBtn">Reset</button>
+    </header>
+    <div id="playerArea">
+        <h2 id="playerScore">Your Score:</h2>
+        <div id="playerScoreArea">
+            <span>&#9734;</span>
+            <span>&#9734;</span>
+            <span>&#9734;</span>
+            <span>&#9734;</span>
+            <span>&#9734;</span>
+        </div>
+        <div id="playerBtns">
+            <button id="playerRock" class="rock">Rock</button>
+            <button id="playerPaper" class="paper">Paper</button>
+            <button id="playerScissors" class="scissors">Scissors</button>
+        </div>
+        <p id="lastRoundMessage">You won this round!</p>
+    </div>
+   <div id="computerArea">
+       <h2 id="computerScore">Computer Score:</h2>
+       <div id="computerScoreArea">
+            <span>&#9734;</span>
+            <span>&#9734;</span>
+            <span>&#9734;</span>
+            <span>&#9734;</span>
+            <span>&#9734;</span>
+       </div>
+       <div id="computerBtns">
+           <button id="computerRock" class="rock">Rock</button>
+           <button id="computerPaper" class="paper">Paper</button>
+           <button id="computerScissors" class="scissors">Scissors</button>
+       </div>
+   </div>
     <script src="/assets/js/script.js"></script>
 </body>
 </html>
