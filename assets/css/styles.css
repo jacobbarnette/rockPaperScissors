@@ -1,0 +1,35 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#titleSection {
+    text-align: center;
+    font-size: 3.5em;
+    letter-spacing: 0.05em;
+    width: 30%;
+    margin: 0 auto;
+}
+
+#btnContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+
+#btnContainer > button {
+    width: 40%;
+    border-radius: 5px;
+    border: none;
+    padding: 1.5% 1.5%;
+}
+
+#playBtn {
+    margin-left: 1.6%;
+   
+}
+
+#resetBtn {
+    margin-right: 1.6%;
+   
+}
