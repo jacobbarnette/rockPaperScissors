@@ -7,6 +7,7 @@
     <!-- css reset -->
     <link rel="stylesheet" href="/assets/css/reset.css" type="text/css" >
     <!-- my css -->
+    <script src="https://kit.fontawesome.com/d56d746569.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/styles.css" type="text/css">
     <title>Rock Paper Scissors</title>
@@ -19,36 +20,39 @@
             <button id="resetBtn">Reset</button>
         </div> 
     </header>
-    <div id="playerArea">
-        <h2 id="playerScore">Your Score:</h2>
-        <div id="playerScoreArea">
-            <span>&#9734;</span>
-            <span>&#9734;</span>
-            <span>&#9734;</span>
-            <span>&#9734;</span>
-            <span>&#9734;</span>
+    <div id="gameContainer">
+        <div id="playerArea" class="gamePlayArea">
+            <h2 id="playerScore" class="score">Your Score:</h2>
+            <div id="playerScoreArea">
+                <span class="stars hasScored">&#9734;</span>
+                <span class="star hasScoreds">&#9734;</span>
+                <span class="stars hasScored">&#9734;</span>
+                <span class="stars hasScored">&#9734;</span>
+                <span class="stars hasScored">&#9734;</span>
+            </div>
+            <div id="playerBtns" class="gameBtnContainer">
+                <button id="playerRock" class="gameBtn rock"><i class="far fa-hand-rock"></i></button>
+                <button id="playerPaper" class="gameBtn paper"><i class="far fa-paper-plane"></i></button>
+                <button id="playerScissors" class="gameBtn scissors"><i class="far fa-hand-scissors"></i></button>
+            </div>
+            <p class="gameStatus noDisplay">You won this round!</p>
         </div>
-        <div id="playerBtns">
-            <button id="playerRock" class="rock">Rock</button>
-            <button id="playerPaper" class="paper">Paper</button>
-            <button id="playerScissors" class="scissors">Scissors</button>
+    <div id="computerArea" class="gamePlayArea">
+        <h2 id="computerScore" class="score">Computer Score:</h2>
+        <div id="computerScoreArea">
+            <span class="stars hasScored">&#9734;</span>
+            <span class="stars hasScored">&#9734;</span>
+            <span class="stars hasScored">&#9734;</span>
+            <span class="stars hasScored">&#9734;</span>
+            <span class="stars hasScored">&#9734;</span>
         </div>
-        <p id="lastRoundMessage">You won this round!</p>
+        <div id="computerBtns" class="gameBtnContainer">
+            <button id="computerRock" class="gameBtn rock"><i class="far fa-hand-rock"></i></button>
+            <button id="computerPaper" class="gameBtn paper"><i class="far fa-paper-plane"></i></button>
+            <button id="computerScissors" class="gameBtn scissors"><i class="far fa-hand-scissors"></i></button>
+        </div>
+        <p class="gameStatus noDisplay">You won this round!</p>
     </div>
-   <div id="computerArea">
-       <h2 id="computerScore">Computer Score:</h2>
-       <div id="computerScoreArea">
-            <span>&#9734;</span>
-            <span>&#9734;</span>
-            <span>&#9734;</span>
-            <span>&#9734;</span>
-            <span>&#9734;</span>
-       </div>
-       <div id="computerBtns">
-           <button id="computerRock" class="rock">Rock</button>
-           <button id="computerPaper" class="paper">Paper</button>
-           <button id="computerScissors" class="scissors">Scissors</button>
-       </div>
    </div>
     <script src="/assets/js/script.js"></script>
 </body>
