@@ -19,32 +19,41 @@
             <button id="playBtn">Play Game</button>
             <button id="resetBtn">Reset</button>
         </div> 
+        <div id="gameRules">
+            <legend>How To Play</legend>
+            <ol>
+                <li>Press your selection when ready</li>
+                <li>Click on any of the icons under the "Your Score" section</li>
+                <li>The first one to fill all 5 stars wins!</li>
+            </ol>
+        </div>
     </header>
     <div id="gameContainer">
         <div id="playerArea" class="gamePlayArea">
             <h2 id="playerScore" class="score">Your Score:</h2>
             <div id="playerScoreArea">
-                <span class="stars hasScored">&#9734;</span>
-                <span class="stars hasScoreds">&#9734;</span>
-                <span class="stars hasScored">&#9734;</span>
-                <span class="stars hasScored">&#9734;</span>
-                <span class="stars hasScored">&#9734;</span>
+                <span class="scoreBoard playerScoreBoard">&#9734;</span>
+                <span class="scoreBoard playerScoreBoard">&#9734;</span>
+                <span class="scoreBoard playerScoreBoard">&#9734;</span>
+                <span class="scoreBoard playerScoreBoard">&#9734;</span>
+                <span class="scoreBoard playerScoreBoard">&#9734;</span>
+                
             </div>
             <div id="playerBtns" class="gameBtnContainer">
-                <button id="playerRock" class="gameBtn rock"><i class="far fa-hand-rock"></i></button>
-                <button id="playerPaper" class="gameBtn paper"><i class="far fa-paper-plane"></i></button>
-                <button id="playerScissors" class="gameBtn scissors"><i class="far fa-hand-scissors"></i></button>
+                <button id="playerRock" class="gameBtn playerGameBtn rock"><i class="far fa-hand-rock"></i></button>
+                <button id="playerPaper" class="gameBtn playerGameBtn paper"><i class="far fa-paper-plane"></i></button>
+                <button id="playerScissors" class="gameBtn playerGameBtn scissors"><i class="far fa-hand-scissors"></i></button>
             </div>
             <p class="gameStatus noDisplay">You won this round!</p>
         </div>
     <div id="computerArea" class="gamePlayArea">
         <h2 id="computerScore" class="score">Computer Score:</h2>
         <div id="computerScoreArea">
-            <span class="stars hasScored">&#9734;</span>
-            <span class="stars hasScored">&#9734;</span>
-            <span class="stars hasScored">&#9734;</span>
-            <span class="stars hasScored">&#9734;</span>
-            <span class="stars hasScored">&#9734;</span>
+            <span class="scoreBoard">&#9734;</span>
+                <span class="scoreBoard">&#9734;</span>
+                <span class="scoreBoard">&#9734;</span>
+                <span class="scoreBoard">&#9734;</span>
+                <span class="scoreBoard">&#9734;</span>
         </div>
         <div id="computerBtns" class="gameBtnContainer">
             <button id="computerRock" class="gameBtn rock"><i class="far fa-hand-rock"></i></button>

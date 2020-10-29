@@ -74,7 +74,7 @@ html {
     padding: 5% 0;
 }
 
-.stars {
+.scoreBoard {
     font-size: 5.5em;
     letter-spacing: 0.5em;
     font-weight: bold;
@@ -93,6 +93,22 @@ html {
     border: none;
     background: none;
     margin-top: 17%;
+}
+
+legend {
+    margin-top: 5%;
+    font-size: 0.5em;
+}
+
+.stars {
+    color: #35CE8D;
+}
+
+li {
+    margin-top: 2%;
+    font-size: 0.25em;
+    text-align: center;
+    line-height: 2;
 }
 
 button:hover{
