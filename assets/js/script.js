@@ -11,6 +11,7 @@ let playerWon = 0;
 let computerWon = 0;
 
 playGameBtn.addEventListener('click', activateGame);
+resetGameBtn.addEventListener('click', resetGame);
 
 function activateGame() {
     playerRockBtn.addEventListener('click', function() {
@@ -43,7 +44,6 @@ function rockPaperScissors(playerSelection, computerSelection) {
     computerSelection = computerPlay();
     if(playerSelection === computerSelection) {
         alert('draw');
-        
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         playerWon++
         pointScored(playerWon);
@@ -71,15 +71,34 @@ function pointScored(playerWon, computerWon) {
         playerScoreBoard[playerWon].classList.add('stars');
     } else if (playerWon >= 2) {
         playerScoreBoard[playerWon -1].classList.add('stars');
-    } 
+    } else if (playerWon === 5) {
+        playerScoreBoard[playerWon -1].classList.add('stars');
+    }
 }
 
 function computerScored(computerWon) {
     if (computerWon === 1) {
         let computerWon = 0;
-        console.log('hi');
         computerScoreBoard[computerWon].classList.add('stars');
-    } else if (computerWon >= 2) {
+    } else if (computerWon <= 4) {
         computerScoreBoard[computerWon -1].classList.add('stars');
+    } else if (computerWon === 5) {
+        computerScoreBoard[computerWon -1].classList.add('stars');
+        alert('You won the game, Press reset to play again');
     }
+}
+
+
+function resetGame() {
+    let i = -1;
+  while(playerScoreBoard.length >0) {
+      i++;
+      if(playerScoreBoard[i].classList.contains('stars')) {
+        playerScoreBoard[i].classList.remove('stars');
+        computerScoreBoard[i].classList.remove('stars');
+      } else if (computerScoreBoard[i].classList.contains('stars')) {
+          computerScoreBoard[i].classList.remove('stars');
+      }
+    }
+    resetGameWon()
 }
