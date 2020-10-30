@@ -4,6 +4,7 @@ let playerRockBtn = document.getElementById('playerRock');
 let playerPaperBtn = document.getElementById('playerPaper');
 let playerScissorsBtn = document.getElementById('playerScissors');
 let playerScoreBoard = document.getElementsByClassName('playerScoreBoard');
+let computerScoreBoard = document.getElementsByClassName('computerScoreBoard');
 let computerSelection;
 
 let playerWon = 0;
@@ -41,41 +42,44 @@ function computerPlay() {
 function rockPaperScissors(playerSelection, computerSelection) {
     computerSelection = computerPlay();
     if(playerSelection === computerSelection) {
-        alert('The round has ended in a draw');
+        alert('draw');
+        
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        alert('Congrats! You won! Rock beats paper'); 
         playerWon++
         pointScored(playerWon);
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-        alert('Sorry, you lost this round! Paper covers rock');   
+       computerWon++
+       computerScored(computerWon);
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        alert('Congrats! You won! Paper covers rock'); 
         playerWon++
         pointScored(playerWon);
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        alert('Sorry, you lost this round! Scissors cut paper');   
+        computerWon++
+        computerScored(computerWon);
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        alert('Congrats! You won! Scissors cuts paper');  
         playerWon++
         pointScored(playerWon);
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        alert('Sorry, you lost this round! Rock beats scissors');
+        computerWon++
+        computerScored(computerWon);
     }
 }
 
-function pointScored(playerWon) {
-    if(playerWon === 1) {
+function pointScored(playerWon, computerWon) {
+    if(playerWon === 1) {   
         let playerWon = 0;
-        console.log(playerWon);
         playerScoreBoard[playerWon].classList.add('stars');
-    } else {
-        console.log(playerWon);
+    } else if (playerWon >= 2) {
         playerScoreBoard[playerWon -1].classList.add('stars');
+    } 
+}
+
+function computerScored(computerWon) {
+    if (computerWon === 1) {
+        let computerWon = 0;
+        console.log('hi');
+        computerScoreBoard[computerWon].classList.add('stars');
+    } else if (computerWon >= 2) {
+        computerScoreBoard[computerWon -1].classList.add('stars');
     }
-    // if(playerWon === 1) {
-    //     console.log('hi');
-    //     playerScoreBoard[0].classList.add('stars');
-    // } else if (scoreBoardDown) {
-    //     playerScoreBoard[scoreBoardDown].classList.add('stars');
-    // }
 }
